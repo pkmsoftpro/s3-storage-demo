@@ -1,0 +1,183 @@
+{
+	"info": {
+		"_postman_id": "54ea92be-8ebf-4473-b0cb-5297b46405cb",
+		"name": "AWS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2944090"
+	},
+	"item": [
+		{
+			"name": "upload-file-content",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBsbmFtZSIsImlhdCI6MTc1Nzg2MDgyMSwiZXhwIjoxNzU3OTQ3MjIxfQ.kqMeOI1ZEhD7reFMitB2i_raswmnQwKkHa-L9goGOAU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\"store this data in s3\"",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/s3/upload-text",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"s3",
+						"upload-text"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-file-names",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBsbmFtZSIsImlhdCI6MTc1Nzg2MDgyMSwiZXhwIjoxNzU3OTQ3MjIxfQ.kqMeOI1ZEhD7reFMitB2i_raswmnQwKkHa-L9goGOAU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\"store this data in s3\"",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/s3/get-keys",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"s3",
+						"get-keys"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "read-file",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBsbmFtZSIsImlhdCI6MTc1Nzg2MDgyMSwiZXhwIjoxNzU3OTQ3MjIxfQ.kqMeOI1ZEhD7reFMitB2i_raswmnQwKkHa-L9goGOAU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\"store this data in s3\"",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/s3/read-file/:filename",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"s3",
+						"read-file",
+						":filename"
+					],
+					"variable": [
+						{
+							"key": "filename",
+							"value": "textfile_208dbd5a-9c29-4457-acdf-b2c8641cb38b.txt"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-file",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBsbmFtZSIsImlhdCI6MTc1Nzg2MDgyMSwiZXhwIjoxNzU3OTQ3MjIxfQ.kqMeOI1ZEhD7reFMitB2i_raswmnQwKkHa-L9goGOAU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "textfile_208dbd5a-9c29-4457-acdf-b2c8641cb38b.txt",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/s3/delete-file",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"s3",
+						"delete-file"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
